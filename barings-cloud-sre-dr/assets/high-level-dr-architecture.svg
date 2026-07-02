@@ -1,0 +1,49 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title{font:700 28px Arial;fill:#172033}.label{font:600 17px Arial;fill:#172033}.small{font:14px Arial;fill:#344054}.box{fill:#f8fafc;stroke:#475467;stroke-width:2;rx:14}.cloud{fill:#eef4ff;stroke:#2e5aac;stroke-width:2;rx:20}.ops{fill:#ecfdf3;stroke:#027a48;stroke-width:2;rx:14}.warn{fill:#fff7ed;stroke:#c2410c;stroke-width:2;rx:14}.line{stroke:#475467;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke:#475467;stroke-width:2;fill:none;stroke-dasharray:8 6;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475467"/></marker>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="60" y="58" class="title">High-Level Disaster Recovery Architecture</text>
+  <rect x="60" y="110" width="310" height="230" class="box"/>
+  <text x="90" y="150" class="label">Primary Production</text>
+  <text x="90" y="185" class="small">US-hosted applications</text>
+  <text x="90" y="215" class="small">Databases</text>
+  <text x="90" y="245" class="small">Market data services</text>
+  <text x="90" y="275" class="small">Current operational workloads</text>
+  <rect x="830" y="110" width="310" height="230" class="cloud"/>
+  <text x="860" y="150" class="label">Cloud / Hybrid DR</text>
+  <text x="860" y="185" class="small">Recovered applications</text>
+  <text x="860" y="215" class="small">Recovered databases</text>
+  <text x="860" y="245" class="small">Standby compute and storage</text>
+  <text x="860" y="275" class="small">Failover target environment</text>
+  <rect x="445" y="135" width="300" height="80" class="warn"/>
+  <text x="475" y="168" class="label">Backup Platform</text>
+  <text x="475" y="194" class="small">Recovery points and retention</text>
+  <rect x="445" y="255" width="300" height="80" class="warn"/>
+  <text x="475" y="288" class="label">Replication Service</text>
+  <text x="475" y="314" class="small">Data replication for RPO</text>
+  <rect x="60" y="430" width="310" height="180" class="ops"/>
+  <text x="90" y="470" class="label">Operations Layer</text>
+  <text x="90" y="505" class="small">Cloud SRE</text>
+  <text x="90" y="535" class="small">Cloud Operations</text>
+  <text x="90" y="565" class="small">Application and Security teams</text>
+  <rect x="445" y="430" width="300" height="180" class="box"/>
+  <text x="475" y="470" class="label">Observability</text>
+  <text x="475" y="505" class="small">Monitoring and alerting</text>
+  <text x="475" y="535" class="small">Central logging</text>
+  <text x="475" y="565" class="small">DR readiness dashboards</text>
+  <rect x="830" y="430" width="310" height="180" class="box"/>
+  <text x="860" y="470" class="label">Runbooks & Evidence</text>
+  <text x="860" y="505" class="small">Recovery procedures</text>
+  <text x="860" y="535" class="small">Validation results</text>
+  <text x="860" y="565" class="small">RTO / RPO measurements</text>
+  <path d="M370 175 H445" class="line"/><path d="M370 295 H445" class="line"/>
+  <path d="M745 175 H830" class="line"/><path d="M745 295 H830" class="line"/>
+  <path d="M215 340 V430" class="line"/><path d="M595 335 V430" class="line"/><path d="M985 340 V430" class="line"/>
+  <path d="M370 520 H445" class="line"/><path d="M745 520 H830" class="line"/>
+  <path d="M985 110 C985 70 215 70 215 110" class="dash"/>
+  <text x="500" y="92" class="small">Failover / Failback traffic routing</text>
+</svg>
